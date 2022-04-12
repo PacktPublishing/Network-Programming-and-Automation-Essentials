@@ -1,0 +1,21 @@
+hostname {{name}} 
+! 
+interface Loopback100 
+ description {{name}} router loopback 
+ ip address 100.100.100.{{id}} 255.255.255.255 
+ ! 
+interface GigabitEthernet1/0 
+ description Connection to {{to_name}} router G0/1 
+! 
+interface GigabitEthernet1/0.1{{id}} 
+ description Access to {{to_name}} 
+ encapsulation dot1Q 1{{id}} 
+ ip address 100.0.1{{id}}.2 255.255.255.252 
+ ip ospf network point-to-point 
+ ip ospf cost 100 
+! 
+router ospf 100 
+ router-id 100.100.100.{{id}} 
+ network 100.0.0.0 0.255.255.255 area 0 
+!
+
