@@ -1,0 +1,20 @@
+hostname Adelaide 
+! 
+interface Loopback100 
+ description Adelaide router loopback 
+ ip address 100.100.100.13 255.255.255.255 
+ ! 
+interface GigabitEthernet1/0 
+ description Connection to Melbourne router G0/1 
+! 
+interface GigabitEthernet1/0.113 
+ description Access to Melbourne 
+ encapsulation dot1Q 113 
+ ip address 100.0.113.2 255.255.255.252 
+ ip ospf network point-to-point 
+ ip ospf cost 100 
+! 
+router ospf 100 
+ router-id 100.100.100.13 
+ network 100.0.0.0 0.255.255.255 area 0 
+!
