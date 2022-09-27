@@ -2,8 +2,8 @@ import asyncio, asyncssh, sys
  
 TARGET = { 
         "host": "10.0.4.1", 
-        "username": "user", 
-        "password": "pw", 
+        "username": "netlab", 
+        "password": "netlab", 
         "known_hosts": None,
 } 
  

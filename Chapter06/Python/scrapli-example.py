@@ -4,8 +4,8 @@ from scrapli.driver import GenericDriver
 
 TARGET = {
     "host": "10.0.4.1",
-    "auth_username": "user",
-    "auth_password": "pw",
+    "auth_username": "netlab",
+    "auth_password": "netlab",
     "auth_strict_key": False,
 }
 
