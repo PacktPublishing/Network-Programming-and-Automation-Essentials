@@ -19,7 +19,7 @@ func main() {
 	ctx, cancel := context.WithCancel(context.Background())
 	defer cancel()
 
-	timeout, _ := time.ParseDuration("4s")
+	timeout, _ := time.ParseDuration("10s")
 	rChannel := vs.Run(ctx, "uptime", timeout)
 
 	for resp := range rChannel {
