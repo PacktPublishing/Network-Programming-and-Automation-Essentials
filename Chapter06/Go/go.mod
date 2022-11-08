@@ -8,7 +8,8 @@ require (
 )
 
 require (
+	github.com/Ali-aqrabawi/gomiko v0.0.1 // indirect
 	github.com/yahoo/vssh v0.0.0-20201122023451-bfa903e660fc // indirect
-	golang.org/x/sys v0.0.0-20210615035016-665e8c7367d1 // indirect
+	golang.org/x/sys v0.0.0-20220928140112-f11e5e49a4ec // indirect
 	golang.org/x/term v0.0.0-20201126162022-7de9c90e9dd1 // indirect
 )
