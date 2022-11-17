@@ -1,4 +1,4 @@
-from pythonping import ping
+from aioping import ping
 import asyncio
 import sys
 
@@ -6,10 +6,10 @@ TARGETS = ["yahoo.com", "google.com", "cisco.com", "cern.ch"]
 
 
 async def myping(host):
-    response = await ping(host)
-    if response.success:
-        print("%s OK, latency is %.2fms" % (host, response.rtt_avg_ms))
-    else:
+    try:
+        delay = await ping(host)
+        print("%s OK, latency is %.3f ms" % (host, delay * 1000))
+    except TimeoutError:
         print(host, "FAILED")
 
 
