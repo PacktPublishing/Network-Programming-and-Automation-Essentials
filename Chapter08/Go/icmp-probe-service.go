@@ -11,7 +11,7 @@ import (
 	"github.com/go-ping/ping"
 )
 
-func myping(host string, w http.ResponseWriter, wg *sync.WaitGroup) {
+func probe(host string, w http.ResponseWriter, wg *sync.WaitGroup) {
 	defer wg.Done()
 	p, err := ping.NewPinger(host)
 	if err != nil {
@@ -33,7 +33,7 @@ func myping(host string, w http.ResponseWriter, wg *sync.WaitGroup) {
 	}
 }
 
-func getAllLatency(w http.ResponseWriter, r *http.Request) {
+func probeTargets(w http.ResponseWriter, r *http.Request) {
 	httpTargets := r.URL.Query().Get("targets")
 	targets := strings.Split(httpTargets, ",")
 	if len(httpTargets) == 0 {
@@ -44,13 +44,13 @@ func getAllLatency(w http.ResponseWriter, r *http.Request) {
 	var wg sync.WaitGroup
 	wg.Add(len(targets))
 	for _, target := range targets {
-		log.Println("requested ping for", target)
-		go myping(target, w, &wg)
+		log.Println("requested ICMP probe for", target)
+		go probe(target, w, &wg)
 	}
 	wg.Wait()
 }
 
 func main() {
-	http.HandleFunc("/latency", getAllLatency)
+	http.HandleFunc("/latency", probeTargets)
 	log.Fatal(http.ListenAndServe(":9900", nil))
 }
