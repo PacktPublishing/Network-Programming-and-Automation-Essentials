@@ -1,0 +1,17 @@
+version: "1.0"
+services:
+  probe1:
+    image: "probe-service:latest"
+    ports: ["9001:9900"]
+  probe2:
+    image: "probe-service:latest"
+    ports: ["9002:9900"]
+  probe3:
+    image: "probe-service:latest"
+    ports: ["9003:9900"]
+  probe4:
+    image: "probe-service:latest"
+    ports: ["9004:9900"]
+  probe5:
+    image: "probe-service:latest"
+    ports: ["9005:9900"]
