@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+	"os"
 	"strings"
 	"sync"
 	"time"
@@ -36,8 +37,8 @@ func probe(host string, w http.ResponseWriter, wg *sync.WaitGroup) {
 func probeTargets(w http.ResponseWriter, r *http.Request) {
 	httpTargets := r.URL.Query().Get("targets")
 	targets := strings.Split(httpTargets, ",")
-	if len(httpTargets) == 0 {
-		fmt.Fprintf(w, "No targets to send ICMP\n")
+	if len(httpTargets) == 0 || len(targets) > 1000 {
+		fmt.Fprintf(w, "error: 0 < targets < 1000\n")
 		return
 	}
 
@@ -51,6 +52,13 @@ func probeTargets(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
+	var listen string
+	if port, ok := os.LookupEnv("PORT"); ok {
+		listen = ":" + port
+	} else {
+		listen = ":9900"
+	}
+
 	http.HandleFunc("/latency", probeTargets)
-	log.Fatal(http.ListenAndServe(":9900", nil))
+	log.Fatal(http.ListenAndServe(listen, nil))
 }
