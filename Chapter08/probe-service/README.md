@@ -6,3 +6,9 @@
 
 # To run multiple services
 `docker compose up -d`
+
+# To run docker swarm in a leader host
+`docker swarm init`
+
+# To add docker swarm nodes
+`docker swarm join --token <token-number> <leader IP>:<leader PORT>`
