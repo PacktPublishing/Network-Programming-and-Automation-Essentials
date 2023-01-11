@@ -5,7 +5,7 @@ TARGETS = ["yahoo.com", "google.com", "cisco.com", "cern.ch"]
 
 
 async def myping(host):
-    response = await ping(host)
+    response = ping(host)
     if response.success:
         print("%s OK, latency is %.2fms" % (host, response.rtt_avg_ms))
     else:

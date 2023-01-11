@@ -1,6 +1,5 @@
 from aioping import ping
 import asyncio
-import sys
 
 TARGETS = ["yahoo.com", "google.com", "cisco.com", "cern.ch"]
 
