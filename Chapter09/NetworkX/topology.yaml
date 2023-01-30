@@ -1,0 +1,58 @@
+devices:
+  - pc-a
+  - cpe-a
+  - acc-a
+  - core-a1
+  - core-a2
+  - core-a3
+  - core-s1
+  - core-s2
+  - core-i1
+  - core-i2
+  - core-i3
+  - border
+  - internet
+
+links:
+  - - pc-a
+    - cpe-a
+  - - cpe-a
+    - acc-a
+  - - acc-a
+    - core-a1
+  - - acc-a
+    - core-a2
+  - - acc-a
+    - core-a3
+  - - core-a1
+    - core-s1
+  - - core-a1
+    - core-s2
+  - - core-a2
+    - core-s1
+  - - core-a2
+    - core-s2
+  - - core-a3
+    - core-s1
+  - - core-a3
+    - core-s2
+  - - core-s1
+    - core-i1
+  - - core-s1
+    - core-i2
+  - - core-s1
+    - core-i3
+  - - core-s2
+    - core-i1
+  - - core-s2
+    - core-i2
+  - - core-s2
+    - core-i3
+  - - core-i1
+    - border
+  - - core-i2
+    - border
+  - - core-i3
+    - border
+  - - border
+    - internet
