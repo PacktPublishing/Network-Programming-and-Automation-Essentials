@@ -12,10 +12,9 @@ https://www.dropbox.com/s/h6mfz20ocu6i4g3/netlab.vdi.bz2?dl=0
 Go to Virtualbox settings for the VM and configure NAT network with port forwarding 22, so you can access the network emulation via SSH.
 
 ### Username and password
-- all devices including the host has the username: `netlab` and password: `netlab`.
-
+- all devices including the host have the username `netlab` with password `netlab`.
 - `sudo` is configured to be used by username `netlab` without password.
-
+- Access to `vtysh` on the routers via username `vtysh` with password `vtysh`.
 
 If you want to do yourself or use Qemu image instead, please visit my github instructions at:
 https://github.com/brnuts/network-lab
