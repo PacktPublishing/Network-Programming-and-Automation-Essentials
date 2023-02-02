@@ -1,6 +1,6 @@
 # Network Lab
 
-To launch a pre-build Linux host with the routers already running for network lab, just download it:
+To launch a pre-build Linux host with the routers already running for network lab, just use the pre-build image below.
 
 ## Using pre-build image on VirtualBox
 ### Download image at
