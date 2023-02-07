@@ -11,14 +11,14 @@ https://www.dropbox.com/s/h6mfz20ocu6i4g3/netlab.vdi.bz2?dl=0
 - Create new VM on VirtualBox using the pre-built image as the disk `netlab.vdi`
 - Add port forwarding to 22 to access SSH by going to Virtualbox settings for the VM and configure NAT network with port forwarding 22, so you can access the network emulation via SSH. With that you can access the network lab by doing `ssh netlab@localhost`
 
-<img src="https://github.com/brnuts/network-lab/blob/main/Port-foward-example-Virtualbox.png" width="400"/>
+<img src="https://github.com/brnuts/netlab/blob/main/Port-foward-example-Virtualbox.png" width="400"/>
 
 - all devices including the host have the username `netlab` with password `netlab`.
 - `sudo` is configured to be used by username `netlab` without password.
 - Access to `vtysh` on the routers via username `vtysh` with password `vtysh`.
 
 If you want to do yourself or use Qemu image instead, please visit my github instructions at:
-https://github.com/brnuts/network-lab
+https://github.com/brnuts/netlab
 
-# Testing code
-Some examples of Go automation to be used in the network lab are included in the Go directory
+# Connecting the devices
+To connect the devices you will just need to get the Go package that connect them for you located at https://github.com/brnuts/netlab/Go
