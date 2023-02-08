@@ -8,7 +8,7 @@ To launch a pre-build Linux host with the routers already running for network la
 https://www.dropbox.com/s/h6mfz20ocu6i4g3/netlab.vdi.bz2?dl=0
 ```
 * Uncompress `netlab.vdi.bz3`
-* Create new VM on VirtualBox using the pre-built image as the disk `netlab.vdi`
+* Create new VM on VirtualBox using the pre-built image as the hard disk `netlab.vdi`
 * Add port forwarding to 22 to access SSH by going to Virtualbox settings for the VM and configure NAT network with port forwarding 22, so you can access the network emulation via SSH. With that you can access the network lab by doing `ssh netlab@localhost`
 
 <img src="https://github.com/brnuts/netlab/blob/main/Port-foward-example-Virtualbox.png" width="400"/>
