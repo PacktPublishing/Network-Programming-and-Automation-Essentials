@@ -5,7 +5,7 @@ To launch a pre-build Linux host with the routers already running for network la
 ## Using pre-build image on VirtualBox
 - Download image at
 ```
-https://www.dropbox.com/s/h6mfz20ocu6i4g3/netlab.vdi.bz2?dl=0
+https://www.dropbox.com/s/2l788jzbpe02rnt/netlab.vdi.bz3?dl=0
 ```
 * Uncompress `netlab.vdi.bz3`
 * Create new VM on VirtualBox using the pre-built image as the hard disk `netlab.vdi`
