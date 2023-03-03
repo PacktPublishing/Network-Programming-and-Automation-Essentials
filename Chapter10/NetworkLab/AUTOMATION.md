@@ -1,4 +1,4 @@
-# Connecting the devices in the lab
+# Automation for devices in the lab
 
 [netlab](https://github.com/brnuts/netlab/tree/main/Go) is a Go program that connects all devices using veth.
 
