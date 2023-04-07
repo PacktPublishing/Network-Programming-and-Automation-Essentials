@@ -54,3 +54,8 @@ We also provide a PDF file that has color images of the screenshots/diagrams use
 **Claus Töpke**
 is a product developer and founder of Telcomanager. He has worked with large network service providers, such as Telstra, NBN Australia, NZ Telecom, AWS Australia, AWS US, and Embratel. He has also worked in conjunction with large network technology corporations, such as Nokia, Amazon, Juniper, and Cisco. He has been able to experience different job titles, passing through fields such as network engineering, network performance, product development, and software engineering. His experience with network automation has led to the construction of several products and systems for different companies. He also worked on network performance for his master’s thesis and wrote a book about service providers.
  
+
+### Download a free PDF
+
+ <i>If you have already purchased a print or Kindle version of this book, you can get a DRM-free PDF version at no cost.<br>Simply click on the link to claim your free PDF.</i>
+<p align="center"> <a href="https://packt.link/free-ebook/9781803233666">https://packt.link/free-ebook/9781803233666 </a> </p>
